@@ -1,10 +1,4 @@
 /* HEADER */
-@media (min-width: 922px) {
-    .ast-container {
-        max-width: 100%;
-        padding: 0;
-    }
-}
 
 /* BOUTON "commander" du header */
 header .ast-custom-button {
@@ -16,7 +10,36 @@ header .ast-custom-button:hover {
     transform: scale(1.05);
 }
 
+/* FOOTER */
+.site-above-footer-wrap[data-section="section-above-footer-builder"] .ast-builder-grid-row {
+    max-width: 100%;
+}
+
+/** Photo du pied de page non affichée**/
+.page-id-32 .site-above-footer-wrap[data-section="section-above-footer-builder"] {
+    display: none;
+}
+
+.wp-block-image.alignfull img, .wp-block-image.alignwide img {
+    height: 131px;
+}
+
+/** Effet de zoom sur le texte "Mentions lègales" **/
+#astra-footer-menu > .menu-item > .menu-link:hover {
+    transition: all .3s ease;
+    transform: scale(1.05);
+}
+
+
 /* MEDIA QUERIES */
+
+@media (min-width: 922px) {
+    /* HEADER */
+    .ast-container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
 @media (max-width: 921px) {
     /* HEADER */
     /** Ouverture du menu burger dans la moitié droite de la largeur du dispositif **/
@@ -55,6 +78,13 @@ header .ast-custom-button:hover {
     border-bottom: 4px solid #ece2da;
 
     }
+
+      /* FOOTER */
+    /** Photo du pied de page  **/
+    .wp-block-image.alignfull img, .wp-block-image.alignwide img {
+        height: 85px;
+        object-fit: cover;
+    }
 }
 
 @media (max-width: 360px) {
@@ -74,5 +104,12 @@ header .ast-custom-button:hover {
     }
     [data-section="section-header-mobile-trigger"] .ast-button-wrap .mobile-menu-wrap .mobile-menu {
         font-size: 11px;
+    }
+
+    /* FOOTER */
+    /** Photo du pied de page  **/
+    .wp-block-image.alignfull img, .wp-block-image.alignwide img {
+        height: 65px;
+        object-fit: cover;
     }
 }
