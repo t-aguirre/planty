@@ -1,0 +1,78 @@
+/* HEADER */
+@media (min-width: 922px) {
+    .ast-container {
+        max-width: 100%;
+        padding: 0;
+    }
+}
+
+/* BOUTON "commander" du header */
+header .ast-custom-button {
+    width: 236px;
+    height: 80px;
+}
+header .ast-custom-button:hover {
+    transition: all .3s ease;
+    transform: scale(1.05);
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 921px) {
+    /* HEADER */
+    /** Ouverture du menu burger dans la moitié droite de la largeur du dispositif **/
+    .ast-header-break-point .ast-builder-menu-mobile .main-navigation {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #ast-hf-mobile-menu {
+        width: 50%;
+        border-left: 4px solid #ece2da;
+        border-top: 4px solid #ece2da;
+    }
+    /** Ouverture du bouton "commander" dans la moitié droite de la largeur du dispositif **/
+
+    .ast-main-header-nav-open.ast-header-break-point #ast-desktop-header .ast-desktop-header-content, .ast-main-header-nav-open.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .ast-header-break-point .ast-header-button-1[data-section="section-hb-button-1"] {
+        width: 50%;
+        margin-bottom: 5px;
+    }
+
+    .ast-builder-button-wrap.ast-builder-button-size- {
+        width: 100%;
+    } 
+
+    .ast-header-button-1[data-section*="section-hb-button-"] .ast-builder-button-wrap .ast-custom-button  {
+    width: 100%;
+    height: auto;
+    padding-left: 36px;
+    border-left: 4px solid #ece2da;
+    border-bottom: 4px solid #ece2da;
+
+    }
+}
+
+@media (max-width: 360px) {
+    /* HEADER */
+
+    /** Menu burger: item "Nous rencontrer" **/
+    .ast-builder-menu-mobile .main-navigation .main-header-menu .menu-item > .menu-link {
+        padding-left: 15px;
+    }
+    /** bouton "commander" menu burger **/
+    .ast-header-button-1[data-section*="section-hb-button-"] .ast-builder-button-wrap .ast-custom-button  {
+        padding-left: 15px;
+    }
+    /** bouton menu burger: texte "menu" **/
+    .ast-mobile-header-wrap .menu-toggle .mobile-menu-wrap {
+        margin-left: .1em;
+    }
+    [data-section="section-header-mobile-trigger"] .ast-button-wrap .mobile-menu-wrap .mobile-menu {
+        font-size: 11px;
+    }
+}
