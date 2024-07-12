@@ -1,14 +1,16 @@
+/* LIEN DU MENU ET DU FOOTER */
+.main-header-menu > .menu-item > .menu-link:hover, #astra-footer-menu > .menu-item > .menu-link:hover {
+    font-weight: 700;
+}
+
 /* HEADER */
 
-/* BOUTON "commander" du header */
+/** BOUTON "commander" du header **/
 header .ast-custom-button {
     width: 236px;
     height: 80px;
 }
-header .ast-custom-button:hover {
-    transition: all .3s ease;
-    transform: scale(1.05);
-}
+
 
 /* FOOTER */
 .site-above-footer-wrap[data-section="section-above-footer-builder"] .ast-builder-grid-row {
@@ -24,12 +26,58 @@ header .ast-custom-button:hover {
     height: 131px;
 }
 
-/** Effet de zoom sur le texte "Mentions lègales" **/
-#astra-footer-menu > .menu-item > .menu-link:hover {
-    transition: all .3s ease;
-    transform: scale(1.05);
+
+/* FORMULAIRE DE COMMANDE */
+.text-white {
+    color: #ffffff;
 }
 
+.order-form-title {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.flavour-label {
+    font-size: 20px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.order-form-text {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/** Conteneurs flex du formulaire de commande **/
+.order-form-container {
+    width: 860px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.planty-flavours-container, .order-form-data {
+    width: 860px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.order-form-info, .order-form-delivery {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-form-separator {
+    border: none;
+    border-top: 1px solid #ffffff;
+    height: 1px;
+}
+
+.order-vertical-line {
+    border: none;
+    border-left: 1px solid #ffffff;
+    height: auto;
+}
 
 /* MEDIA QUERIES */
 

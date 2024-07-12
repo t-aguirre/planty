@@ -17,7 +17,7 @@ function theme_enqueue_styles()
 function add_admin_header_menu_item($items, $args)
 {
     if (is_user_logged_in() && current_user_can('administrator') && $args->theme_location == 'primary') {
-        $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143"><a href="' . admin_url() . '" class="menu-link" >Admin</a></li>';
+        $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . admin_url() . '" class="menu-link" >Admin</a></li>';
     }
     return $items;
 }
