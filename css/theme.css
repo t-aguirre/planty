@@ -1,15 +1,104 @@
 /* LIEN DU MENU ET DU FOOTER */
-.main-header-menu > .menu-item > .menu-link:hover, #astra-footer-menu > .menu-item > .menu-link:hover {
+/* .main-header-menu > .menu-item > .menu-link:hover, #astra-footer-menu > .menu-item > .menu-link:hover {
+    transform: scale(0.8125);
     font-weight: 700;
+} */
+
+/* .secondary a *, .site-footer a *, .site-header a *, a {
+    transition: all 0.5s ease-out !important;
+} */
+
+/* .main-header-menu .menu-link, .main-header-menu>a {
+    transition: all 0.5s ease-in;
+    transform-origin: center center;
+} */
+
+/* Menu */
+ul#ast-hf-menu-1 li:nth-child(1) {
+    width: 174px;
+} 
+
+ul#ast-hf-menu-1 li:nth-child(2) {
+    width: 110px;
+} 
+
+ul#ast-hf-menu-1 .menu-link, ul#astra-footer-menu .menu-link {
+    transition: transform 0.3s ease;
 }
 
+ul#ast-hf-menu-1 .menu-link:hover, ul#astra-footer-menu .menu-link:hover{
+    /* font-size: 13px !important; */
+    font-weight: 700;
+    transform: scale(0.9);
+}
+
+ul#ast-hf-menu-1 li, #astra-footer-menu #menu-item-79 {
+    transition: transform 0.3s ease;
+}
+
+ul#ast-hf-menu-1 li:hover, #astra-footer-menu #menu-item-79:hover {
+    transform: scale(0.9);
+}
+
+.main-header-menu .menu-item, #astra-footer-menu .menu-item, .main-header-bar .ast-masthead-custom-menu-items {
+    align-items:center;
+}
+
+/* .main-header-menu .menu-link, .main-header-menu>a {
+    transition: all 0.5s linear !important;
+} */
+
 /* HEADER */
+
+/** Suppression du border-bottom gris clair affiché par défaut**/
+.ast-primary-header-bar.ast-primary-header.main-header-bar.site-header-focus-item {
+    border-bottom: 0;
+}
 
 /** BOUTON "commander" du header **/
 header .ast-custom-button {
     width: 236px;
     height: 80px;
 }
+
+/** Courbe du bottom du block Hero **/
+.wp-block-columns.custom-header-separator.has-ast-global-color-1-background-color.has-background.is-layout-flex.wp-container-core-columns-is-layout-1.wp-block-columns-is-layout-flex {
+    border-bottom-right-radius: 400px 57px !important;
+    border-bottom-left-radius: 400px 57px !important;
+}
+
+/** Hero: Montage de l'image de la canette de l'Accueil**/
+.wp-block-group.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-2.wp-block-group-is-layout-flex {
+    position: relative;
+}
+
+.wp-block-group.is-content-justification-center.is-nowrap.is-layout-flex.wp-container-core-group-is-layout-1.wp-block-group-is-layout-flex {
+    position: relative;
+}
+
+figure.wp-block-image.size-full.is-resized.drink-img {
+    position: absolute;
+    bottom: 85px;
+    padding-right: 32px;
+}
+
+
+/* BLOCK "Les goûts" */
+.wp-container-core-group-is-layout-3.wp-container-core-group-is-layout-3 {
+    row-gap: 40px !important;
+}
+
+/** Courbe du bottom du block "Les goûts" de la page Accueil**/
+.wp-block-columns.alignfull.custom-flavors-block-separator.has-ast-global-color-1-background-color.has-background.is-layout-flex.wp-container-core-columns-is-layout-3.wp-block-columns-is-layout-flex {
+    border-bottom-right-radius: 400px 19px !important;
+    border-bottom-left-radius: 400px 19px !important;
+}
+
+/** Bouton **/
+.wp-block-button.has-custom-width.wp-block-button__width-25.has-custom-font-size.is-style-fill {
+    width: 198px;
+}
+
 
 
 /* FOOTER */
@@ -20,10 +109,6 @@ header .ast-custom-button {
 /** Photo du pied de page non affichée**/
 .page-id-32 .site-above-footer-wrap[data-section="section-above-footer-builder"] {
     display: none;
-}
-
-.wp-block-image.alignfull img, .wp-block-image.alignwide img {
-    height: 131px;
 }
 
 
@@ -124,8 +209,10 @@ header .ast-custom-button {
     padding-left: 36px;
     border-left: 4px solid #ece2da;
     border-bottom: 4px solid #ece2da;
+    margin-left: 0;
 
     }
+    
 
       /* FOOTER */
     /** Photo du pied de page  **/
