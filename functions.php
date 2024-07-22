@@ -81,6 +81,13 @@ function img_footer_background()
             height: 131px;
             width: 100%;
         }
+
+        @media (max-width: 1439px) {
+            #widget1-img-background {
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
     </style>
 <?php
 }
