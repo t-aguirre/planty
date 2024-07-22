@@ -48,6 +48,26 @@ function get_acf_image($atts)
 }
 add_shortcode('acf_image', 'get_acf_image');
 
+//Fonction qui génère un shortcode qui permettra de relier le formulaire de précommande dans Contact Form 7 avec le groupe de champs ACF "Images-precommande"
+function get_acf_label($atts)
+{
+    $atts = shortcode_atts(array(
+        'id' => '',
+    ), $atts);
+
+    // Récupération du label de l'image depuis ACF
+    $label_id = get_field($atts['id']);
+
+    if ($label_id) {
+        return esc_html($label_id);
+    }
+
+    return "Aucun label n'a été renseigné";
+}
+add_shortcode('acf_label', 'get_acf_label');
+
+
+
 // Footer: génération d'une url dynamique pour l'affichage de l'image de canettes (id: 117) du footer
 function img_footer_background()
 {
