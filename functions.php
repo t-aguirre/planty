@@ -22,3 +22,46 @@ function add_admin_header_menu_item($items, $args)
     return $items;
 }
 add_filter('wp_nav_menu_items', 'add_admin_header_menu_item', 10, 2);
+
+
+//Fonction qui génère un shortcode qui permettra de relier le formulaire de précommande dans Contact Form 7 avec le groupe de champs ACF "Images-precommande"
+function get_acf_image($atts)
+{
+    $atts = shortcode_atts(array(
+        'id' => '',
+    ), $atts);
+
+    // Récupération de l'ID de l'image depuis ACF
+    $image_id = get_field($atts['id']);
+
+    if ($image_id) {
+        // Récupération de l'URL de l'image en utilisant l'ID
+        $image_url = wp_get_attachment_image_url($image_id, 'full');
+        // Récupération de l'attribut alt
+        $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
+
+        if ($image_url) {
+            return '<img src="' . esc_url($image_url) . '" alt="' . esc_attr($image_alt) . '">';
+        }
+    }
+    return "Aucune image n'a été assignée";
+}
+add_shortcode('acf_image', 'get_acf_image');
+
+// Footer: génération d'une url dynamique pour l'affichage de l'image de canettes (id: 117) du footer
+function img_footer_background()
+{
+    $img_url = wp_get_attachment_url(117);
+?>
+    <style type='text/css'>
+        #widget1-img-background {
+            background-image: url('<?php echo esc_url($img_url); ?>');
+            background-size: contain;
+            background-position: top;
+            height: 131px;
+            width: 100%;
+        }
+    </style>
+<?php
+}
+add_action('wp_head', 'img_footer_background');
