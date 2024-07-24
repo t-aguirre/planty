@@ -71,7 +71,7 @@ add_shortcode('acf_label', 'get_acf_label');
 // Footer: génération d'une url dynamique pour l'affichage de l'image de canettes (id: 117) du footer
 function img_footer_background()
 {
-    $img_url = wp_get_attachment_url(117);
+    $img_url = wp_get_attachment_url(569);
 ?>
     <style type='text/css'>
         #widget1-img-background {
