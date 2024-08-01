@@ -94,7 +94,48 @@ p.customer-1-text.has-ast-global-color-7-color.has-text-color, p.customer-2-text
     margin-bottom: 0;
 }
 
+/* PAGE "NOUS RENCONTRER" */
+/** BLOCK 1: HERO **/
+.wp-block-group.about-full-width-container.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-2.wp-block-group-is-layout-flex {
+    position: relative;
+}
 
+.wp-block-group.about-hero-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-1.wp-block-group-is-layout-flex {
+    position: relative;
+    width: 100%;
+}
+
+figure.wp-block-image.size-large.is-resized.about-hero-image {
+    position: absolute;
+    left: 10%;
+    top: -40%;
+}
+
+p.has-text-align-center.about-text {
+    width: 669px;
+    padding-bottom: 9px !important;
+}
+
+/*** Courbe du bottom de la section  ***/
+.wp-block-group.about-full-width-container.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-2.wp-block-group-is-layout-flex {
+    border-bottom-right-radius: 636px 72px !important;
+    border-bottom-left-radius: 636px 72px !important;
+}
+
+/** BLOCK 2: "NOUS RENCONTRER" **/
+.wp-block-group.team-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-4.wp-block-group-is-layout-flex, .wp-block-group.team-members-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-3.wp-block-group-is-layout-flex {
+    position: relative;
+}
+
+.wp-block-group.team-members-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-3.wp-block-group-is-layout-flex {
+    width: 100%;
+}
+
+figure.wp-block-image.size-large.is-resized.team-decorative-image {
+    bottom: 0%;
+    position: absolute;
+    right: 0%;
+}
 
 /* FOOTER */
 .site-above-footer-wrap[data-section="section-above-footer-builder"] .ast-builder-grid-row {
@@ -106,8 +147,62 @@ p.customer-1-text.has-ast-global-color-7-color.has-text-color, p.customer-2-text
     display: none;
 }
 
+/* FORMULAIRES */
+/** FORMULAIRE DE CONTACT, page "Nous rencontrer"  **/
+form.wpcf7-form.init {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-/* FORMULAIRE DE COMMANDE */
+.contact-form-inputs-container {
+    width: 383px;
+    margin: auto;
+}
+
+.contact-form-name > span > input, .contact-form-email > span > input {
+	width: 100%;
+	height: 71px;
+    border: 0;
+}
+
+.contact-form-message > span > textarea {
+    height: 237px;
+    border: 0;
+}
+
+.contact-form-inputs-container p {
+    margin-bottom: 12px;
+}
+
+.contact-form-inputs-container p label {
+    font-size: 20px;
+}
+
+/** Mise en place de l'Image décorative du formulaire de contact **/
+.wp-block-group.alignfull.contact-form-wrapper.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-6.wp-block-group-is-layout-flex {
+    position: relative;
+    width: 530px;
+}
+
+.wp-block-group.contact-form-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-5.wp-block-group-is-layout-flex {
+    position: relative;
+    width: 100%;
+}
+
+.contact-form-inputs-container {
+    z-index: 10;
+}
+
+figure.wp-block-image.size-large.is-resized.contact-form-image {
+    position: absolute;
+    bottom: 14%;
+    left: 1%;
+    z-index: 5;
+}
+
+
+/** FORMULAIRE DE COMMANDE, page "Commander" **/
 /** Titre "Commander" **/
 h1.wp-block-heading.has-text-align-center.main-order-title.has-ast-global-color-5-color.has-text-color.has-link-color {
     padding-bottom: 40px;
@@ -208,17 +303,18 @@ input[type="number"]::placeholder {
   font-family: inter;
 }
 
-    /* Enlever les flèches d'incrémentation/décrémentation */
+/** Enlever les flèches d'incrémentation/décrémentation **/
 input[type=number]::-webkit-outer-spin-button,
 input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
-/* Enlever les flèches d'incrémentation/décrémentation */
+
 input[type=number] {
     -moz-appearance: textfield !important;
 }
 
+/** Inputs des sections "Vos informations" et "Livraison" **/
 input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-inputs, input.wpcf7-form-control.wpcf7-number.wpcf7-validates-as-required.wpcf7-validates-as-number {
     width: 383px;
     height: 71px;
@@ -237,21 +333,57 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     height: auto;
 }
 
-/** Bouton Submit et Spinner **/
-.order-form-container > p:last-child {
+/** Bouton Submit et Spinner du formulaire de contact et du formulaire de pré-commande**/
+.order-form-container > p:last-child, .contact-form-inputs-container > p:last-child {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 0;
+}
+
+.order-form-container > p:last-child {
     margin-top: 44px;
 }
 
-.order-form-container > p:last-child span {
+.contact-form-inputs-container > p:last-child {
+    margin-top: 24px;
+}
+
+.order-form-container > p:last-child span, .contact-form-inputs-container > p:last-child span {
     margin-top: 10px;
 }
 
 
 /* MEDIA QUERIES */
+@media (max-width: 1406px) {
+    /* PAGE "NOUS RENCONTRER" */
+    /** BLOCK 1: "Nous rencontrer" **/
+    .wp-block-group.about-full-width-container.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-2.wp-block-group-is-layout-flex {
+        padding-top: 80px !important;
+    }
+
+    figure.wp-block-image.size-large.is-resized.about-hero-image {
+        position: static;
+        order: 2;
+    }
+
+    .about-hero-image img.wp-image-128 {
+        height: 120px;
+    }
+
+    /** BLOCK 2: "L'équipe" **/
+    .wp-block-group.team-members-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-3.wp-block-group-is-layout-flex {
+        padding-bottom: 0 !important;
+    }
+
+    figure.wp-block-image.size-large.is-resized.team-decorative-image {
+        position: static;
+    }
+
+    .team-decorative-image > img.wp-image-378 {
+        height: 160px;
+    }
+}
 
 @media (min-width: 922px) {
     /* HEADER */
@@ -348,7 +480,24 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     flex-basis: auto;
     }
 
-    /* PAGE COMMANDER: FORMULAIRE */
+    /* PAGE "NOUS RENCONTRER" */
+    /** BLOCK 1: "Nous rencontrer" **/
+    h1.about-hero-title {
+        font-size: 25px !important;
+        word-spacing: 5px;
+    }
+
+    p.has-text-align-center.about-text {
+        width: 100%;
+    }
+
+    /** FOOTER page "Nous rencontrer" **/
+    .site-footer-above-section-1.site-footer-section.site-footer-section-1 {
+        margin-bottom: 0 !important;
+    }
+
+
+    /* PAGE "COMMANDER": FORMULAIRE */
     /** Sections du formulaire **/
     section.order-form-quantities-section, section.order-form-data-section {
         width: 545px;
@@ -396,11 +545,17 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
    
 @media (max-width: 544px) {
     /* TITLES */
+    /** Title page d'accueil **/
     h1.wp-block-heading.has-text-align-center.main-home-title.has-ast-global-color-0-color.has-ast-global-color-1-background-color.has-text-color.has-background.has-link-color {
         font-size: 25px !important;
         padding-left: 0;
         padding-right: 0;
         padding-bottom: 130px !important;
+    }
+
+    /** Title page "Nous rencontrer" **/
+    h1.wp-block-heading.about-hero-title.has-ast-global-color-4-color.has-text-color.has-link-color {
+        text-align: center;
     }
 
     h3.wp-block-heading.customer-1-title.has-ast-global-color-0-color.has-text-color, h3.wp-block-heading.customer-2-title.has-ast-global-color-0-color.has-text-color.has-link-color, h3.wp-block-heading.customer-3-title.has-ast-global-color-0-color.has-text-color.has-link-color {
@@ -451,6 +606,24 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
 
     p.customer-1-text.has-ast-global-color-7-color.has-text-color, p.customer-3-text.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-840513b95b177e7caf82453a1688cc91 {
         width: 150%;
+    }
+
+    /* PAGE "NOUS RENCONTRER" */
+    p.has-text-align-center.about-text {
+        width: 90%;
+    }
+
+    .wp-block-group.alignfull.contact-form-wrapper.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-6.wp-block-group-is-layout-flex {
+        width: 360px;
+    }
+
+    /** Formulaire de contact **/
+    .contact-form-inputs-container {
+        width: 80%;
+    }
+
+    figure.wp-block-image.size-large.is-resized.contact-form-image {
+        display: none;
     }
 
     /* PAGE COMMANDER: FORMULAIRE */
@@ -519,9 +692,14 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     }
 
     /* TITLES */
-    h2.wp-block-heading.has-text-align-center.plants-energy-title, h2.wp-block-heading.has-text-align-center.customers-main-title.has-ast-global-color-0-color.has-text-color.has-link-color, h2.wp-block-heading.has-text-align-center.flavors-title.has-ast-global-color-4-color.has-text-color.has-link-color {
-        font-size: 18px !important;
-        text-align: left;
+    h1.wp-block-heading.has-text-align-center.main-home-title.has-ast-global-color-0-color.has-ast-global-color-1-background-color.has-text-color.has-background.has-link-color {
+        padding-bottom: 80px !important;
+    }
+
+    h1.wp-block-heading.has-text-align-center.main-home-title.has-ast-global-color-0-color.has-ast-global-color-1-background-color.has-text-color.has-background.has-link-color, h1.wp-block-heading.about-hero-title.has-ast-global-color-4-color.has-text-color.has-link-color {
+        font-size: 20px !important;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     h3.wp-block-heading.has-text-align-center.flavors-subtitle.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-ee3108a25a40b87940b8a71db3b4d7a6 {
@@ -537,13 +715,6 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     /** BLOCK 1: "Boisson énergisante 100% naturelle" **/
     .wp-block-columns.custom-header-separator.has-ast-global-color-1-background-color.has-background.is-layout-flex.wp-container-core-columns-is-layout-1.wp-block-columns-is-layout-flex {
         padding-top: 80px !important;
-    }
-
-    h1.wp-block-heading.has-text-align-center.main-home-title.has-ast-global-color-0-color.has-ast-global-color-1-background-color.has-text-color.has-background.has-link-color.wp-elements-335b2181fba608e358a3b783a7e789d1 {
-        font-size: 20px !important;
-        padding-left: 0;
-        padding-right: 0;
-        padding-bottom: 80px !important;
     }
 
     /** BLOCK 3: "Les goûts" **/
@@ -578,6 +749,19 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
 
     p.customer-2-text.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-2e640cfb4a7d2a905140b7ca9deed4ef {
         width: 150%;
+    }
+
+    /* PAGE "NOUS RENCONTRER" */
+    .wp-block-group.alignfull.contact-form-wrapper.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-6.wp-block-group-is-layout-flex {
+        width: 100%;
+    }
+
+    .wp-block-group.about-full-width-container.has-ast-global-color-1-background-color.has-background.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-2.wp-block-group-is-layout-flex {
+        padding-top: 50px !important;
+    }
+
+    .wp-block-group.team-container.is-vertical.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-4.wp-block-group-is-layout-flex {
+        gap: 0;
     }
 
      /* PAGE COMMANDER: FORMULAIRE */
