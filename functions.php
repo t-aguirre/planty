@@ -72,6 +72,7 @@ add_shortcode('acf_label', 'get_acf_label');
 function img_footer_background()
 {
     $img_url = wp_get_attachment_url(569);
+    $is_home_page = is_front_page();
 ?>
     <style type='text/css'>
         #widget1-img-background {
@@ -80,6 +81,8 @@ function img_footer_background()
             background-position: top;
             height: 131px;
             width: 100%;
+            /* Couleur de fond de l'image dans la page d'accueil*/
+            background-color: <?php echo $is_home_page ? '#ffffff' : 'transparent'; ?>;
         }
 
         @media (max-width: 1439px) {
