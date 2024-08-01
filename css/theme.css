@@ -42,6 +42,7 @@ header .ast-custom-button {
     height: 80px;
 }
 
+/* PAGE ACCUEIL */
 /** Courbe du bottom du block Hero **/
 .wp-block-columns.custom-header-separator.has-ast-global-color-1-background-color.has-background.is-layout-flex.wp-container-core-columns-is-layout-1.wp-block-columns-is-layout-flex {
     border-bottom-right-radius: 400px 57px !important;
@@ -63,7 +64,10 @@ figure.wp-block-image.size-full.is-resized.drink-img {
     padding-right: 32px;
 }
 
-/* PAGE ACCUEIL */
+P.plants-energy-text span {
+    display:block;
+}
+
 /** BLOCK 3: "Les goûts" **/
 .wp-container-core-group-is-layout-3.wp-container-core-group-is-layout-3 {
     row-gap: 40px !important;
@@ -399,14 +403,12 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
         padding-bottom: 135px !important;
     }
 
-    h2.wp-block-heading.has-text-align-center.flavors-title.has-ast-global-color-4-color.has-text-color.has-link-color.wp-elements-8a2e4f0ff961ef7f87bf771a665b5224 {
-        text-align: left;
+    h2.wp-block-heading.has-text-align-center.flavors-title.has-ast-global-color-4-color.has-text-color.has-link-color {
         padding-left: 37px;
         padding-right: 37px;
     }
 
     h3.wp-block-heading.has-text-align-center.flavors-subtitle.has-ast-global-color-7-color.has-text-color.has-link-color {
-        text-align: left;
         padding-left: 37px;
         padding-right: 37px;
     }
@@ -448,10 +450,18 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     border-bottom: 4px solid #ece2da;
     margin-left: 0;
     }
+    /** BLOCK 3 "Les goûts" **/
+    h3.wp-block-heading.has-text-align-center.flavors-subtitle.has-ast-global-color-7-color.has-text-color.has-link-color {
+        width: 393px;
+        margin: auto;
+        padding-top: 15px;
+    }
 
-
-    /* PAGE ACCUEIL*/
     /** BLOCK 4 "Ce qu'ils en pensent" **/
+    .wp-block-group.customer-reviews-container.is-content-justification-center.is-layout-flex.wp-container-core-group-is-layout-4.wp-block-group-is-layout-flex {
+        row-gap: 60px;
+    }
+
     .wp-block-columns.customers-main-container.is-layout-flex.wp-container-core-columns-is-layout-4.wp-block-columns-is-layout-flex {
         padding-left: 60px !important;
         padding-right: 60px !important;
@@ -478,6 +488,10 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
 
     .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-1-container.wp-container-content-5, .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-2-container.wp-container-content-6, .wp-block-media-text.is-stacked-on-mobile.customer-3-container.wp-container-content-7 {
     flex-basis: auto;
+    }
+
+    .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-1-container.wp-container-content-5 > figure, .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-2-container.wp-container-content-6 > figure, .wp-block-media-text.is-stacked-on-mobile.customer-3-container.wp-container-content-7 > figure {
+        width: 135.86px;
     }
 
     /* PAGE "NOUS RENCONTRER" */
@@ -563,18 +577,19 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     }   
 
     /* PAGE ACCUEIL*/
+    /** BLOCK HERO **/
+    p.plants-energy-text span {
+        display: inline;
+    }
+
     /** BLOCK 3: "les Goûts" **/
     .wp-block-column.is-vertically-aligned-center.flavors-container.is-layout-flow.wp-block-column-is-layout-flow {
         padding-left: 27px;
         padding-right: 27px;
     }
 
-    h2.wp-block-heading.has-text-align-center.flavors-title.has-ast-global-color-4-color.has-text-color.has-link-color.wp-elements-8a2e4f0ff961ef7f87bf771a665b5224 {
-        text-align: left;
-    }
-
     h3.wp-block-heading.has-text-align-center.flavors-subtitle.has-ast-global-color-7-color.has-text-color.has-link-color {
-        text-align: left;
+        width: 100%;
     }
 
     /** BLOCK 4: "Ce qu'ils en pensent" **/
@@ -588,24 +603,12 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
         padding-right: 40px;
     }
 
-    .wp-block-group.customer-reviews-container.is-content-justification-space-between.is-layout-flex.wp-container-core-group-is-layout-4.wp-block-group-is-layout-flex {
-        row-gap: 30px;
-    }
-
-    .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-1-container.wp-container-content-5, .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-2-container.wp-container-content-6, .wp-block-media-text.is-stacked-on-mobile.customer-3-container.wp-container-content-7 {
-        width: 40%;
-    }
-
     p.customer-2-text.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-2e640cfb4a7d2a905140b7ca9deed4ef {
         margin-bottom: 0;
     }
 
     p.customer-2-text.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-2e640cfb4a7d2a905140b7ca9deed4ef > br {
         display: none;
-    }
-
-    p.customer-1-text.has-ast-global-color-7-color.has-text-color, p.customer-3-text.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-840513b95b177e7caf82453a1688cc91 {
-        width: 150%;
     }
 
     /* PAGE "NOUS RENCONTRER" */
@@ -717,6 +720,11 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
         padding-top: 80px !important;
     }
 
+    .wp-block-column.is-vertically-aligned-center.is-layout-flow.wp-block-column-is-layout-flow {
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+    }
+
     /** BLOCK 3: "Les goûts" **/
     .wp-block-column.is-vertically-aligned-center.flavors-container.is-layout-flow.wp-block-column-is-layout-flow {
         padding-left: 30px;
@@ -741,10 +749,6 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
 
     .wp-block-columns.customers-main-container.is-layout-flex.wp-container-core-columns-is-layout-4.wp-block-columns-is-layout-flex {
         padding-top: 50px !important;
-    }
-
-    .wp-block-media-text.is-stacked-on-mobile.is-vertically-aligned-center.customer-2-container.wp-container-content-6 {
-        margin-right: 40px;
     }
 
     p.customer-2-text.has-ast-global-color-7-color.has-text-color.has-link-color.wp-elements-2e640cfb4a7d2a905140b7ca9deed4ef {
