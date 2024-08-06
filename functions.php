@@ -66,7 +66,46 @@ function get_acf_label($atts)
 }
 add_shortcode('acf_label', 'get_acf_label');
 
+//Formulaire de contact de la page "Nous rencontrer": génération d'une url dynamique pour afficher l'image décorative en background
+function background_contact_form_img()
+{
+    $contact_img = wp_get_attachment_url(659);
 
+?>
+    <style type='text/css'>
+        .contact-form-relative-wrapper {
+            background-image: url('<?php echo esc_url($contact_img); ?>');
+            background-position: 0% 85%;
+            background-repeat: no-repeat;
+            background-size: 147px;
+            background-attachment: scroll;
+            position: relative;
+            padding-left: 70px;
+            padding-right: 70px;
+            margin-bottom: 52px !important;
+        }
+
+        @media (max-width: 544px) {
+            .contact-form-relative-wrapper {
+                background-position: -5% 84%;
+                background-size: 130px;
+                padding-left: 40px;
+                padding-right: 40px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .contact-form-relative-wrapper {
+                background-position: 0% 82%;
+                background-size: 100px;
+                padding-left: 50px;
+                padding-right: 50px;
+            }
+        }
+    </style>
+<?php
+}
+add_action('wp_head', 'background_contact_form_img');
 
 // Footer: génération d'une url dynamique pour l'affichage de l'image de canettes (id: 117) du footer
 function img_footer_background()
