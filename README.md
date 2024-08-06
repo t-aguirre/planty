@@ -1,7 +1,3 @@
-<p align="left">
-  <img src="http://localhost/projets-oc/planty/wp-content/uploads/2024/07/Logo.svg" alt="logo de Planty" height="19px">
-</p>
-
 # Planty est une boisson énergisante, 100% naturelle
 
 ## 🔹 Objectif
