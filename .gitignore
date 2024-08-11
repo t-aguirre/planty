@@ -1,0 +1,27 @@
+# Fichiers de log
+*.log
+
+# Fichiers de configuration sensibles
+wp-config.php
+
+# Fichiers et répertoires de cache et sauvegardes
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/wp-cache-config.php
+wp-content/plugins/updraftplus/
+
+# Fichiers temporaires
+*.tmp
+*.temp
+*.bak
+
+# Fichiers de base de données
+*.sql
+*.sql.gz
+
+#fichiers de configuration du serveur
+.htaccess
