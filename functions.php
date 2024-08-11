@@ -16,7 +16,7 @@ function theme_enqueue_styles()
 // Ajout du lien "admin" dans la nav du header lorsque l'utiliateur est connecté
 function add_admin_header_menu_item($items, $args)
 {
-    if (is_user_logged_in() && current_user_can('administrator') && $args->theme_location == 'primary') {
+    if (is_user_logged_in() && current_user_can('administrator') && ($args->theme_location == 'primary' || $args->theme_location == 'mobile_menu')) {
         $items .= '<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="' . admin_url() . '" class="menu-link" >Admin</a></li>';
     }
     return $items;

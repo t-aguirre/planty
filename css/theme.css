@@ -410,8 +410,12 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
         border-left: 4px solid #ece2da;
         border-top: 4px solid #ece2da;
     }
-    /** Ouverture du bouton "commander" dans la moitié droite de la largeur du dispositif **/
 
+    li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item {
+        border-bottom: 1px solid #ece2da;
+    }
+
+    /** Ouverture du bouton "commander" dans la moitié droite de la largeur du dispositif **/
     .ast-main-header-nav-open.ast-header-break-point #ast-desktop-header .ast-desktop-header-content, .ast-main-header-nav-open.ast-header-break-point .ast-mobile-header-wrap .ast-mobile-header-content {
         display: flex;
         flex-direction: column;
@@ -432,6 +436,7 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
     height: auto;
     padding-left: 36px;
     border-left: 4px solid #ece2da;
+    border-top: 3px solid #ece2da;
     border-bottom: 4px solid #ece2da;
     margin-left: 0;
     }
