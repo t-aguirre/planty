@@ -411,7 +411,7 @@ input.wpcf7-form-control.wpcf7-text.wpcf7-validates-as-required.order-form-data-
         border-top: 4px solid #ece2da;
     }
 
-    li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item {
+    ul#ast-hf-mobile-menu li.menu-item.menu-item-type-post_type.menu-item-object-page.menu-item {
         border-bottom: 1px solid #ece2da;
     }
 
