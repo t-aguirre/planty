@@ -13,6 +13,7 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/wp-cache-config.php
 wp-content/plugins/updraftplus/
+wp-content/updraft
 
 # Fichiers temporaires
 *.tmp
